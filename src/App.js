@@ -7,6 +7,7 @@ import { ContextShopProvider } from "./context/ContextShop";
 import Footer from "./components/footer/Footer";
 import Allitems from "./pages/allItems/Allitems";
 import HorizScroll from "./pages/customsneakers/HorizScroll";
+import About from "./pages/about/About";
 function App() {
   return (
     <ContextShopProvider>
@@ -15,6 +16,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />}></Route>
           <Route path="/cart" element={<Cart />}></Route>
+          <Route path="/about" element={<About/>}></Route>
           <Route
             path="/product/:productId/:productName"
             element={<ProductDetail />}

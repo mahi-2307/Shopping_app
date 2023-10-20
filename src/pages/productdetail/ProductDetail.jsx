@@ -40,7 +40,6 @@ function ProductDetail() {
                 onClick={() => {
                   removeFromCart(product.id);
                 }}
-                // disabled={quantity < 1}
               >
                 -
               </button>

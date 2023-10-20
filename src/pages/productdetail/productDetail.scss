@@ -15,8 +15,8 @@
 
         justify-content: center;
         img {
-          width: fit-content;
-          height: 90vh;
+          max-width: 100%;  // Add this property
+          height: auto;     // Maintain aspect ratio
           object-fit: cover;
         }
       }
@@ -95,20 +95,19 @@
           line-height: 30px;
         }
       }
-      
     }
     @media screen and (max-width: 1000px) {
       .about-product {
         display: flex;
         flex-direction: column;
       }
-     .product-details{
-      width: 100%;
-     }
+      .product-details {
+        width: 100%;
+      }
     }
   }
-  @media screen and (max-width: 1000px){
-    .detail_container{
+  @media screen and (max-width: 1000px) {
+    .detail_container {
       justify-content: center;
     }
   }
