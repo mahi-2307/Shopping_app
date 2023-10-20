@@ -1,5 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Alumni+Sans+Collegiate+One:ital@1&family=Roboto+Condensed&family=Tilt+Neon&display=swap");
+
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  text-decoration: none;
+  color: black;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+button {
+  cursor: pointer;
 }

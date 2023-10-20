@@ -1,0 +1,131 @@
+.empty-cart {
+  margin: 50px 0;
+  p {
+    font-size: 50px;
+    text-align: center;
+  }
+  .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    button {
+      width: max-content;
+      padding: 15px;
+    }
+    .checkout {
+      outline: none;
+      background-color: white;
+      border: 1px solid black;
+      font-size: 17px;
+      font-weight: 600;
+    }
+    .continue-shopping {
+      background-color: black;
+      a {
+        color: white;
+        font-size: 17px;
+        font-weight: 600;
+      }
+    }
+  }
+}
+.cart {
+  height: calc(100vh - 50px);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+margin: 100px 0px;
+  .cart-items {
+    padding: 20px;
+    box-shadow: 1px 1px 4px 1px gray;
+    h1 {
+      text-align: center;
+      padding: 10px;
+    }
+    .cart-item {
+      display: grid;
+      grid-template-columns: auto auto auto;
+      align-items: center;
+      gap: 30px;
+      img {
+        width: 20vw;
+      }
+      .details {
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+        #name {
+          font-weight: 600;
+          font-size: 18px;
+        }
+
+        .quantity {
+          border: 1px solid gray;
+          width: fit-content;
+          display: flex;
+          width: 30%;
+          height: 40px;
+          align-items: center;
+          justify-content: space-around;
+          button {
+            background: none;
+            border: none;
+            outline: none;
+            font-size: 20px;
+          }
+        }
+      }
+      .price {
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+        button {
+          background: none;
+          outline: none;
+          border: none;
+          border-bottom: 1px solid gray;
+          cursor: pointer;
+        }
+      }
+    }
+    @media screen and (max-width:1000px) {
+      .cart-item{
+        display: flex;
+        flex-direction: column;
+       padding: 20px 0;
+        .price{
+          display: flex;
+          
+        }
+      }
+    }
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      button {
+        width: max-content;
+        padding: 15px;
+      }
+      .checkout {
+        outline: none;
+        background-color: white;
+        border: 1px solid black;
+        font-size: 17px;
+        font-weight: 600;
+      }
+      .continue-shopping {
+        background-color: black;
+        a {
+          color: white;
+          font-size: 17px;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}

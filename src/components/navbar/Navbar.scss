@@ -1,60 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Alumni+Sans+Collegiate+One:ital@1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alumni+Sans+Collegiate+One:ital@1&family=Tilt+Neon&display=swap");
 .navbar {
-    position: sticky;
-    top: 0;
-    z-index: 999;
+  padding: 10px 50px;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  font-family: "Tilt Neon", sans-serif;
+  background-color: white;
   .container {
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     .top {
-      display: grid;
-      grid-template-columns: 30% auto auto;
-      padding: 20px;
+      display: flex;
+      justify-content: space-between;
       align-items: center;
       .left {
-        display: flex;
-        gap: 20px;
-        align-items: center;
-        .search {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          border-bottom: 1px solid black;
-          width: 200px;
-          height: 30px;
-          input {
-            outline: none;
-            border: none;
-          }
+        text-align: center;
+        p {
+          font-size: 35px;
+          font-family: "Alumni Sans Collegiate One", sans-serif;
         }
       }
       .center {
-        text-align: center;
-        img {
-          height: 40px;
+        display: flex;
+        gap: 20px;
+        font-weight: 500;
+        font-size: 20px;
+        a {
         }
       }
       .right {
-        text-align: right;
-      }
-    }
-    .bottom {
-      display: flex;
-      justify-content: center;
-      .categories_list {
-        a {
-       
-          text-decoration: none;
-          color: black;
-          margin: 0 20px;
-          .category{
-            display: none;
+        display: flex;
+        align-items: center;
+        color: black;
+        justify-content: end;
+        gap: 20px;
+       .signin{
+        cursor: pointer;
+       }
+        .mobNav {
+          display: none;
+        }
+        @media screen and (max-width: 720px) {
+          .mobNav {
+            display: flex;
           }
         }
-        a:hover{
-          .category{
-            display: block;
+      }
+    }
+
+    .mobNavMenu {
+      display: none;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      width: 40%;
+      height: 40vh;
+      background-color: gray;
+      padding: 20px;
+      gap: 20px;
+      text-align: right;
+
+      &.open {
+        display: block;
+      }
+
+      .close {
+        font-size: 20px;
+        cursor: pointer;
+      }
+
+      .mobCenter {
+        a {
+          display: block;
+          font-size: 20px;
+          margin: 10px 0;
+          text-decoration: none;
+          color: white;
+        }
+      }
+      button {
+        background: none;
+        border: none;
+      }
+    }
+  }
+  @media screen and (max-width: 720px) {
+    .container {
+      .top {
+        .center {
+          display: none;
+        }
+        .right{
+          .signin{
+            display: none;
           }
         }
       }

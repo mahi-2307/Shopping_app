@@ -1,0 +1,42 @@
+.sneakerSection {
+  display: grid;
+  grid-template-columns: 20rem 20rem 20rem;
+  gap: 20px 40px;
+  justify-content: center;
+  .itemCard {
+    a {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      img {
+        width: 200px;
+      }
+      .details {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        p {
+          font-weight: bold;
+        }
+        .name {
+          font-weight: bold;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width:950px) {
+  
+  .sneakerSection{
+    grid-template-columns: auto auto;
+  }
+}
+@media screen and (max-width:480px) {
+  
+  .sneakerSection{
+    grid-template-columns:auto;
+  }
+}

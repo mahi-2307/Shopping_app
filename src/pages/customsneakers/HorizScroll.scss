@@ -1,0 +1,21 @@
+.carousel {
+  cursor: grab;
+  overflow: hidden;
+ 
+  .inner-carousel {
+
+    display: flex;
+    .item {
+      min-height: 30rem;
+     
+      padding: 40px;
+      min-width: 30rem;
+      img {
+        width: 100%;
+        height: 60%;
+        object-fit: contain;
+        overflow: hidden;
+      }
+    }
+  }
+}

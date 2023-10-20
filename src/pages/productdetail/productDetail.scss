@@ -1,0 +1,115 @@
+.productDetail {
+  .detail_container {
+    .route {
+      padding: 0 20px;
+      font-size: 15px;
+      color: gray;
+      font-weight: 500;
+    }
+    .about-product {
+      display: grid;
+      grid-template-columns: 50% 40%;
+      justify-content: space-around;
+      .image-gallery {
+        display: flex;
+
+        justify-content: center;
+        img {
+          width: fit-content;
+          height: 90vh;
+          object-fit: cover;
+        }
+      }
+      .product-details {
+        border-bottom: 1px solid black;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+        .p_n {
+          #name {
+            font-size: 2rem;
+          }
+          #price {
+            font-weight: 600;
+            font-size: 20px;
+          }
+        }
+        select {
+          width: 60%;
+          height: 40px;
+          font-size: 17px;
+          outline: none;
+          cursor: pointer;
+        }
+        .quantity {
+          border: 1px solid gray;
+          width: fit-content;
+          display: flex;
+          width: 40%;
+          height: 50px;
+          align-items: center;
+          justify-content: space-around;
+          p {
+            font-weight: 600;
+            font-size: 20px;
+          }
+          button {
+            background: none;
+            border: none;
+            outline: none;
+            font-size: 20px;
+          }
+        }
+        .toCart {
+          width: 60%;
+          height: 40px;
+          background: none;
+          outline: none;
+          font-size: 20px;
+        }
+        .toCart:hover {
+          color: white;
+          background-color: black;
+          cursor: pointer;
+        }
+        .buynow {
+          width: 60%;
+          height: 40px;
+          background: none;
+          outline: none;
+          font-size: 20px;
+          color: white;
+          background-color: black;
+        }
+
+        .buynow:hover {
+          cursor: pointer;
+          color: black;
+          background-color: white;
+        }
+        #desc {
+          font-size: 17px;
+          width: 100%;
+          font-weight: 500;
+          line-height: 30px;
+        }
+      }
+      
+    }
+    @media screen and (max-width: 1000px) {
+      .about-product {
+        display: flex;
+        flex-direction: column;
+      }
+     .product-details{
+      width: 100%;
+     }
+    }
+  }
+  @media screen and (max-width: 1000px){
+    .detail_container{
+      justify-content: center;
+    }
+  }
+}

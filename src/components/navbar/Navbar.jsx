@@ -1,42 +1,59 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import "./Navbar.scss";
-import { Link } from "react-router-dom";
-import SearchIcon from "@mui/icons-material/Search";
-import CategoryCard from "../categoryCard/CategoryCard";
-import logo from "../../assets/logo.png";
+import PersonIcon from "@mui/icons-material/Person";
+import MenuIcon from "@mui/icons-material/Menu";
+import { Link as ScrollLink } from "react-scroll"; // Rename react-scroll Link as ScrollLink
+import { Link as RouterLink } from "react-router-dom"; // Rename react-router Link as RouterLink
+import ShoppingBagIcon from "@mui/icons-material/ShoppingBag";
 function Navbar() {
+  const [mobNav, setMobNav] = useState(false);
+  const toggleMobNav = () => {
+    setMobNav(!mobNav);
+  };
   return (
     <section className="navbar">
       <div className="container">
         <div className="top">
           <div className="left">
-            <p>Find store</p>
-            <div className="search">
-              <SearchIcon className="icon" />
-              <input type="text" placeholder="Search" />
-            </div>
+            <RouterLink to="/">
+              <p>SNEAKerHEAD</p>
+            </RouterLink>
           </div>
           <div className="center">
-            <img src={logo} alt="logo of website" />
+            <RouterLink to="/allItems">PRODUCTS</RouterLink>
+            <RouterLink to="/about">ABOUT</RouterLink>
+            <RouterLink to="/contact">CONTACT</RouterLink>
           </div>
           <div className="right">
-            <p>Sign In</p>
+            <PersonIcon className="signin" />
+
+            <RouterLink to="/cart">
+              <ShoppingBagIcon className="icon" />
+            </RouterLink>
+            <div className="mobNav" onClick={toggleMobNav}>
+              <MenuIcon className="icon" />
+            </div>
           </div>
         </div>
-        <div className="bottom">
-          <div className="categories_list">
-            <Link to="/">
-                <p>Women</p>
-              <div className= "category">
-                <CategoryCard />
-              </div>
-            </Link>
-            <Link to="/">Divided</Link>
-            <Link to="/">Men</Link>
-            <Link to="/">Baby</Link>
-            <Link to="/">Kids</Link>
-            <Link to="/">Home</Link>
-          </div>
+        <div className={`mobNavMenu ${mobNav ? "open" : ""}`}>
+          <button className="close" onClick={toggleMobNav}>
+            X
+          </button>
+          {mobNav && (
+            <div className="mobCenter">
+              <RouterLink to="/">HOME</RouterLink>
+              <RouterLink to="/allItems" onClick={toggleMobNav}>
+                PRODUCTS
+              </RouterLink>
+              <RouterLink to="/about" onClick={toggleMobNav}>
+                ABOUT
+              </RouterLink>
+              <RouterLink to="/contact" onClick={toggleMobNav}>
+                CONTACT
+              </RouterLink>
+              <RouterLink>SIGN IN</RouterLink>
+            </div>
+          )}
         </div>
       </div>
     </section>
